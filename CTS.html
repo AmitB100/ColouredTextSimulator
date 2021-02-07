@@ -1,0 +1,38 @@
+<html>
+	<body style="background-color: rgb(236, 240, 241);">
+		<h1><font color="red">Coloured <font color="blue">Text <font color="green">Simulator</h1>
+		<input type = "text" id="inp"/>
+		<button onClick="pressedRed()"><font color="red"><strong>Red</strong></button>
+		<button onClick="pressedGreen()"><font color="green"><strong>Green</strong></button>
+		<button onClick="pressedBlue()"><font color="blue"><strong>Blue</strong></button>
+		
+		<p id="output"></p>
+		<script>
+			var list = [];
+
+			function pressedRed(){
+				var text = document.getElementById("inp").value;
+				list.push('<br><font color="red">'+text);
+				opt_view();
+			}
+
+			function pressedBlue(){
+				var text = document.getElementById("inp").value;
+				list.push('<br><font color="blue">'+text);
+				opt_view();
+			}
+
+			function pressedGreen(){
+				var text = document.getElementById("inp").value;
+				list.push('<br><font color="green">'+text);
+				opt_view();	
+			}
+
+			function opt_view(){
+				document.getElementById("output").innerHTML = list;
+				
+			}
+
+		</script>
+	</body>
+</html>
